@@ -1,0 +1,116 @@
+/* UAN Common UI - Shared Styles */
+
+/* Theme Tokens - Can be overridden per-domain */
+:root {
+    /* UAN Default Theme (Earth Tones) */
+    --uan-primary: #1A1A1A;
+    --uan-secondary: #D4C4A8;
+    --uan-accent: #B8860B;
+    --uan-earth: #8B7355;
+    --uan-sand: #D4C4A8;
+    --uan-white: #FAFAFA;
+    --uan-black: #1A1A1A;
+
+    /* Semantic Colors */
+    --uan-success: #22C55E;
+    --uan-warning: #F59E0B;
+    --uan-error: #EF4444;
+    --uan-info: #3B82F6;
+
+    /* Spacing */
+    --uan-spacing-xs: 0.25rem;
+    --uan-spacing-sm: 0.5rem;
+    --uan-spacing-md: 1rem;
+    --uan-spacing-lg: 1.5rem;
+    --uan-spacing-xl: 2rem;
+
+    /* Border Radius */
+    --uan-radius-sm: 0.25rem;
+    --uan-radius-md: 0.5rem;
+    --uan-radius-lg: 1rem;
+
+    /* Fonts */
+    --uan-font-sans: 'Inter', system-ui, sans-serif;
+    --uan-font-serif: 'Georgia', serif;
+}
+
+/* Wampum Theme Override */
+[data-theme="wampum"] {
+    --uan-primary: #5D4E37;
+    --uan-secondary: #F5E6D3;
+    --uan-accent: #8B7355;
+}
+
+/* Verify Theme Override */
+[data-theme="verify"] {
+    --uan-primary: #0F172A;
+    --uan-secondary: #E2E8F0;
+    --uan-accent: #22C55E;
+}
+
+/* ID Theme Override */
+[data-theme="id"] {
+    --uan-primary: #1E293B;
+    --uan-secondary: #F1F5F9;
+    --uan-accent: #3B82F6;
+}
+
+/* Mint Theme Override */
+[data-theme="mint"] {
+    --uan-primary: #312E81;
+    --uan-secondary: #C7D2FE;
+    --uan-accent: #8B5CF6;
+}
+
+/* Chain Theme Override */
+[data-theme="chain"] {
+    --uan-primary: #0C0A09;
+    --uan-secondary: #F5F5F4;
+    --uan-accent: #F59E0B;
+}
+
+/* Base Styles */
+.uan-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--uan-spacing-md);
+}
+
+.uan-card {
+    background: var(--uan-white);
+    border: 1px solid var(--uan-secondary);
+    border-radius: var(--uan-radius-md);
+    padding: var(--uan-spacing-lg);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.uan-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--uan-spacing-sm) var(--uan-spacing-lg);
+    border-radius: var(--uan-radius-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.uan-btn-primary {
+    background: var(--uan-accent);
+    color: var(--uan-white);
+    border: none;
+}
+
+.uan-btn-primary:hover {
+    opacity: 0.9;
+}
+
+.uan-btn-secondary {
+    background: transparent;
+    color: var(--uan-primary);
+    border: 1px solid var(--uan-primary);
+}
+
+.uan-btn-secondary:hover {
+    background: var(--uan-secondary);
+}

@@ -1,0 +1,57 @@
+{
+    "name": "@uan/common-ui",
+    "version": "1.0.0",
+    "description": "Shared UI components for UAN multi-domain system",
+    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./components": {
+            "import": "./dist/components/index.js",
+            "types": "./dist/components/index.d.ts"
+        },
+        "./hooks": {
+            "import": "./dist/hooks/index.js",
+            "types": "./dist/hooks/index.d.ts"
+        },
+        "./lib": {
+            "import": "./dist/lib/index.js",
+            "types": "./dist/lib/index.d.ts"
+        },
+        "./styles.css": "./dist/styles.css"
+    },
+    "scripts": {
+        "build": "tsc && cp src/styles.css dist/",
+        "dev": "tsc --watch",
+        "lint": "eslint src/",
+        "clean": "rm -rf dist"
+    },
+    "peerDependencies": {
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.0",
+        "@types/react-dom": "^18.2.0",
+        "typescript": "^5.3.0"
+    },
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tomahawktecha4/uan-common-ui.git"
+    },
+    "keywords": [
+        "uan",
+        "ui",
+        "components",
+        "sacred"
+    ],
+    "license": "MIT"
+}
