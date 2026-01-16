@@ -7,3 +7,6 @@ export * from './hooks';
 
 // Lib
 export * from './lib';
+
+// Types
+export * from './types/directus';
